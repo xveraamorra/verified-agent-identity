@@ -24,13 +24,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd scripts
-          npm install
+        cd scripts
+        npm install
 
       - name: Create Ethereum Identity
         run: node scripts/createNewEthereumIdentity.js
 
       - name: Link Human to Agent
-  run: |
+        run: |
     CHALLENGE='{"name":"vera_amorra","description":"vera_amorra AI Agent"}'
     node scripts/manualLinkHumanToAgent.js --challenge "$CHALLENGE"
