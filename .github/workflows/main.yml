@@ -31,5 +31,6 @@ jobs:
         run: node scripts/createNewEthereumIdentity.js
 
       - name: Link Human to Agent
-        run: |
-          node scripts/manualLinkHumanToAgent.js --challenge '{"name":"vera_amorra","description":"vera_amorra AI Agent"}'
+  run: |
+    CHALLENGE='{"name":"vera_amorra","description":"vera_amorra AI Agent"}'
+    node scripts/manualLinkHumanToAgent.js --challenge "$CHALLENGE"
